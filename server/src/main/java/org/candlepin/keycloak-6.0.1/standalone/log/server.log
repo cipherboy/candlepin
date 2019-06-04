@@ -1,0 +1,449 @@
+2019-06-04 09:46:13,134 INFO  [org.jboss.as.server] (Thread-2) WFLYSRV0272: Suspending server
+2019-06-04 09:46:13,136 INFO  [org.jboss.as.ejb3] (Thread-2) WFLYEJB0493: EJB subsystem suspension complete
+2019-06-04 09:46:13,137 INFO  [org.jboss.as.server] (Thread-2) WFLYSRV0220: Server shutdown has been requested via an OS signal
+2019-06-04 09:46:13,149 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) WFLYJCA0010: Unbound data source [java:jboss/datasources/KeycloakDS]
+2019-06-04 09:46:13,153 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0008: Undertow HTTPS listener https suspending
+2019-06-04 09:46:13,152 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-2) WFLYMAIL0002: Unbound mail session [java:jboss/mail/Default]
+2019-06-04 09:46:13,160 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 70) WFLYUT0022: Unregistered web context: '/auth' from server 'default-server'
+2019-06-04 09:46:13,162 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8483
+2019-06-04 09:46:13,176 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0019: Host default-host stopping
+2019-06-04 09:46:13,179 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-8) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+2019-06-04 09:46:13,180 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) WFLYJCA0019: Stopped Driver service with driver-name = h2
+2019-06-04 09:46:13,184 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 63) WFLYCLINF0003: Stopped loginFailures cache from keycloak container
+2019-06-04 09:46:13,192 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 63) WFLYCLINF0003: Stopped offlineClientSessions cache from keycloak container
+2019-06-04 09:46:13,203 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 70) WFLYCLINF0003: Stopped authorization cache from keycloak container
+2019-06-04 09:46:13,204 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 71) WFLYCLINF0003: Stopped realms cache from keycloak container
+2019-06-04 09:46:13,206 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0008: Undertow HTTP listener default suspending
+2019-06-04 09:46:13,206 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 79) WFLYCLINF0003: Stopped authenticationSessions cache from keycloak container
+2019-06-04 09:46:13,206 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 77) WFLYCLINF0003: Stopped users cache from keycloak container
+2019-06-04 09:46:13,205 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 74) WFLYCLINF0003: Stopped clientSessions cache from keycloak container
+2019-06-04 09:46:13,208 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0028: Stopped deployment keycloak-server.war (runtime-name: keycloak-server.war) in 69ms
+2019-06-04 09:46:13,211 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8181
+2019-06-04 09:46:13,212 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 76) WFLYCLINF0003: Stopped keys cache from keycloak container
+2019-06-04 09:46:13,212 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0004: Undertow 2.0.19.Final stopping
+2019-06-04 09:46:13,213 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 78) WFLYCLINF0003: Stopped work cache from keycloak container
+2019-06-04 09:46:13,213 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 72) WFLYCLINF0003: Stopped actionTokens cache from keycloak container
+2019-06-04 09:46:13,214 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 75) WFLYCLINF0003: Stopped sessions cache from keycloak container
+2019-06-04 09:46:13,214 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 73) WFLYCLINF0003: Stopped offlineSessions cache from keycloak container
+2019-06-04 09:46:13,216 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 71) WFLYCLINF0003: Stopped client-mappings cache from ejb container
+2019-06-04 09:46:13,237 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0050: Keycloak 6.0.1 (WildFly Core 8.0.0.Final) stopped in 98ms
+2019-06-04 09:48:04,459 INFO  [org.jboss.modules] (main) JBoss Modules version 1.9.0.Final
+2019-06-04 09:48:04,900 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.5.Final
+2019-06-04 09:48:04,914 INFO  [org.jboss.threads] (main) JBoss Threads version 2.3.3.Final
+2019-06-04 09:48:05,081 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: Keycloak 6.0.1 (WildFly Core 8.0.0.Final) starting
+2019-06-04 09:48:05,082 DEBUG [org.jboss.as.config] (MSC service thread 1-2) Configured system properties:
+	[Standalone] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_212-b04
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_212
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.212-b04
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	jboss.home.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1
+	jboss.host.name = dhcp137-233
+	jboss.modules.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = dhcp137-233
+	jboss.qualified.host.name = dhcp137-233.rdu.redhat.com
+	jboss.server.base.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone
+	jboss.server.config.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/configuration
+	jboss.server.data.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/data
+	jboss.server.deploy.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/data/content
+	jboss.server.log.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/log
+	jboss.server.name = dhcp137-233
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/configuration/logging.properties
+	module.path = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/modules
+	org.jboss.boot.log.file = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	os.arch = amd64
+	os.name = Linux
+	os.version = 5.0.9-301.fc30.x86_64
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/jboss-modules.jar -mp /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/modules org.jboss.as.standalone -Djboss.home.dir=/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1 -Djboss.server.base.dir=/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = US
+	user.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/bin
+	user.home = /home/skalyana
+	user.language = en
+	user.name = skalyana
+	user.timezone = America/New_York
+2019-06-04 09:48:05,083 DEBUG [org.jboss.as.config] (MSC service thread 1-2) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/log/server.log -Dlogging.configuration=file:/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/configuration/logging.properties 
+2019-06-04 09:48:06,081 INFO  [org.wildfly.security] (ServerService Thread Pool -- 18) ELY00001: WildFly Elytron version 1.8.0.Final
+2019-06-04 09:48:06,720 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2019-06-04 09:48:06,744 ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool -- 2) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "datasources"),
+    ("data-source" => "KeycloakDS")
+]) - failure description: "WFLYCTL0212: Duplicate resource [
+    (\"subsystem\" => \"datasources\"),
+    (\"data-source\" => \"KeycloakDS\")
+]"
+2019-06-04 09:48:06,790 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 25) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2019-06-04 09:48:06,794 ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool -- 25) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "undertow"),
+    ("server" => "default-server"),
+    ("https-listener" => "https")
+]) - failure description: "WFLYCTL0212: Duplicate resource [
+    (\"subsystem\" => \"undertow\"),
+    (\"server\" => \"default-server\"),
+    (\"https-listener\" => \"https\")
+]"
+2019-06-04 09:48:06,871 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) "WFLYCTL0193: Failed executing subsystem datasources boot operations"
+2019-06-04 09:48:06,871 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) "WFLYCTL0193: Failed executing subsystem undertow boot operations"
+2019-06-04 09:48:06,873 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("parallel-subsystem-boot") failed - address: ([]) - failure description: "\"WFLYCTL0193: Failed executing subsystem datasources boot operations\""
+2019-06-04 09:48:06,877 FATAL [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0056: Server boot has failed in an unrecoverable manner; exiting. See previous messages for details.
+2019-06-04 09:48:06,893 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0050: Keycloak 6.0.1 (WildFly Core 8.0.0.Final) stopped in 11ms
+2019-06-04 09:49:14,061 INFO  [org.jboss.modules] (main) JBoss Modules version 1.9.0.Final
+2019-06-04 09:49:14,411 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.5.Final
+2019-06-04 09:49:14,421 INFO  [org.jboss.threads] (main) JBoss Threads version 2.3.3.Final
+2019-06-04 09:49:14,543 INFO  [org.jboss.as] (MSC service thread 1-1) WFLYSRV0049: Keycloak 6.0.1 (WildFly Core 8.0.0.Final) starting
+2019-06-04 09:49:14,545 DEBUG [org.jboss.as.config] (MSC service thread 1-1) Configured system properties:
+	[Standalone] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_212-b04
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_212
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.212-b04
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	jboss.home.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1
+	jboss.host.name = dhcp137-233
+	jboss.modules.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = dhcp137-233
+	jboss.qualified.host.name = dhcp137-233.rdu.redhat.com
+	jboss.server.base.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone
+	jboss.server.config.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/configuration
+	jboss.server.data.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/data
+	jboss.server.deploy.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/data/content
+	jboss.server.log.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/log
+	jboss.server.name = dhcp137-233
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/configuration/logging.properties
+	module.path = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/modules
+	org.jboss.boot.log.file = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	os.arch = amd64
+	os.name = Linux
+	os.version = 5.0.9-301.fc30.x86_64
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/jboss-modules.jar -mp /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/modules org.jboss.as.standalone -Djboss.home.dir=/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1 -Djboss.server.base.dir=/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = US
+	user.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/bin
+	user.home = /home/skalyana
+	user.language = en
+	user.name = skalyana
+	user.timezone = America/New_York
+2019-06-04 09:49:14,545 DEBUG [org.jboss.as.config] (MSC service thread 1-1) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/log/server.log -Dlogging.configuration=file:/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/configuration/logging.properties 
+2019-06-04 09:49:15,195 INFO  [org.wildfly.security] (ServerService Thread Pool -- 17) ELY00001: WildFly Elytron version 1.8.0.Final
+2019-06-04 09:49:15,668 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2019-06-04 09:49:15,689 ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool -- 4) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "datasources"),
+    ("data-source" => "KeycloakDS")
+]) - failure description: "WFLYCTL0212: Duplicate resource [
+    (\"subsystem\" => \"datasources\"),
+    (\"data-source\" => \"KeycloakDS\")
+]"
+2019-06-04 09:49:15,698 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 26) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2019-06-04 09:49:15,700 ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool -- 26) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "undertow"),
+    ("server" => "default-server"),
+    ("https-listener" => "https")
+]) - failure description: "WFLYCTL0212: Duplicate resource [
+    (\"subsystem\" => \"undertow\"),
+    (\"server\" => \"default-server\"),
+    (\"https-listener\" => \"https\")
+]"
+2019-06-04 09:49:15,776 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) "WFLYCTL0193: Failed executing subsystem datasources boot operations"
+2019-06-04 09:49:15,776 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) "WFLYCTL0193: Failed executing subsystem undertow boot operations"
+2019-06-04 09:49:15,778 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("parallel-subsystem-boot") failed - address: ([]) - failure description: "\"WFLYCTL0193: Failed executing subsystem datasources boot operations\""
+2019-06-04 09:49:15,782 FATAL [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0056: Server boot has failed in an unrecoverable manner; exiting. See previous messages for details.
+2019-06-04 09:49:15,799 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0050: Keycloak 6.0.1 (WildFly Core 8.0.0.Final) stopped in 12ms
+2019-06-04 10:14:45,907 INFO  [org.jboss.modules] (main) JBoss Modules version 1.9.0.Final
+2019-06-04 10:14:46,255 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.5.Final
+2019-06-04 10:14:46,264 INFO  [org.jboss.threads] (main) JBoss Threads version 2.3.3.Final
+2019-06-04 10:14:46,390 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: Keycloak 6.0.1 (WildFly Core 8.0.0.Final) starting
+2019-06-04 10:14:46,391 DEBUG [org.jboss.as.config] (MSC service thread 1-2) Configured system properties:
+	[Standalone] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_212-b04
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_212
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.212-b04
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	jboss.home.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1
+	jboss.host.name = dhcp137-233
+	jboss.modules.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = dhcp137-233
+	jboss.qualified.host.name = dhcp137-233.rdu.redhat.com
+	jboss.server.base.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone
+	jboss.server.config.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/configuration
+	jboss.server.data.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/data
+	jboss.server.deploy.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/data/content
+	jboss.server.log.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/log
+	jboss.server.name = dhcp137-233
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/configuration/logging.properties
+	module.path = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/modules
+	org.jboss.boot.log.file = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	os.arch = amd64
+	os.name = Linux
+	os.version = 5.0.9-301.fc30.x86_64
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/jboss-modules.jar -mp /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/modules org.jboss.as.standalone -Djboss.home.dir=/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1 -Djboss.server.base.dir=/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = US
+	user.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/bin
+	user.home = /home/skalyana
+	user.language = en
+	user.name = skalyana
+	user.timezone = America/New_York
+2019-06-04 10:14:46,392 DEBUG [org.jboss.as.config] (MSC service thread 1-2) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/log/server.log -Dlogging.configuration=file:/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/configuration/logging.properties 
+2019-06-04 10:14:47,057 INFO  [org.wildfly.security] (ServerService Thread Pool -- 8) ELY00001: WildFly Elytron version 1.8.0.Final
+2019-06-04 10:14:47,544 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2019-06-04 10:14:47,569 ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool -- 5) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "datasources"),
+    ("data-source" => "KeycloakDS")
+]) - failure description: "WFLYCTL0212: Duplicate resource [
+    (\"subsystem\" => \"datasources\"),
+    (\"data-source\" => \"KeycloakDS\")
+]"
+2019-06-04 10:14:47,585 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 20) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2019-06-04 10:14:47,587 ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool -- 20) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "undertow"),
+    ("server" => "default-server"),
+    ("https-listener" => "https")
+]) - failure description: "WFLYCTL0212: Duplicate resource [
+    (\"subsystem\" => \"undertow\"),
+    (\"server\" => \"default-server\"),
+    (\"https-listener\" => \"https\")
+]"
+2019-06-04 10:14:47,667 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) "WFLYCTL0193: Failed executing subsystem datasources boot operations"
+2019-06-04 10:14:47,667 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) "WFLYCTL0193: Failed executing subsystem undertow boot operations"
+2019-06-04 10:14:47,668 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("parallel-subsystem-boot") failed - address: ([]) - failure description: "\"WFLYCTL0193: Failed executing subsystem datasources boot operations\""
+2019-06-04 10:14:47,672 FATAL [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0056: Server boot has failed in an unrecoverable manner; exiting. See previous messages for details.
+2019-06-04 10:14:47,692 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0050: Keycloak 6.0.1 (WildFly Core 8.0.0.Final) stopped in 15ms
+2019-06-04 10:19:11,532 INFO  [org.jboss.modules] (main) JBoss Modules version 1.9.0.Final
+2019-06-04 10:19:11,860 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.5.Final
+2019-06-04 10:19:11,869 INFO  [org.jboss.threads] (main) JBoss Threads version 2.3.3.Final
+2019-06-04 10:19:11,991 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: Keycloak 6.0.1 (WildFly Core 8.0.0.Final) starting
+2019-06-04 10:19:11,993 DEBUG [org.jboss.as.config] (MSC service thread 1-2) Configured system properties:
+	[Standalone] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 1.8.0_212-b04
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_212
+	java.vm.info = mixed mode
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.212-b04
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	jboss.home.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1
+	jboss.host.name = dhcp137-233
+	jboss.modules.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = dhcp137-233
+	jboss.qualified.host.name = dhcp137-233.rdu.redhat.com
+	jboss.server.base.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone
+	jboss.server.config.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/configuration
+	jboss.server.data.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/data
+	jboss.server.deploy.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/data/content
+	jboss.server.log.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/log
+	jboss.server.name = dhcp137-233
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/configuration/logging.properties
+	module.path = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/modules
+	org.jboss.boot.log.file = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	os.arch = amd64
+	os.name = Linux
+	os.version = 5.0.9-301.fc30.x86_64
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-0.fc30.x86_64/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/jboss-modules.jar -mp /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/modules org.jboss.as.standalone -Djboss.home.dir=/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1 -Djboss.server.base.dir=/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = US
+	user.dir = /home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/bin
+	user.home = /home/skalyana
+	user.language = en
+	user.name = skalyana
+	user.timezone = America/New_York
+2019-06-04 10:19:11,993 DEBUG [org.jboss.as.config] (MSC service thread 1-2) VM Arguments: -D[Standalone] -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/log/server.log -Dlogging.configuration=file:/home/skalyana/IdeaProjects/candlepin/server/src/main/java/org/candlepin/keycloak-6.0.1/standalone/configuration/logging.properties 
+2019-06-04 10:19:12,652 INFO  [org.wildfly.security] (ServerService Thread Pool -- 15) ELY00001: WildFly Elytron version 1.8.0.Final
+2019-06-04 10:19:13,133 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2019-06-04 10:19:13,160 ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool -- 3) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "datasources"),
+    ("data-source" => "KeycloakDS")
+]) - failure description: "WFLYCTL0212: Duplicate resource [
+    (\"subsystem\" => \"datasources\"),
+    (\"data-source\" => \"KeycloakDS\")
+]"
+2019-06-04 10:19:13,180 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 26) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2019-06-04 10:19:13,182 ERROR [org.jboss.as.controller.management-operation] (ServerService Thread Pool -- 26) WFLYCTL0013: Operation ("add") failed - address: ([
+    ("subsystem" => "undertow"),
+    ("server" => "default-server"),
+    ("https-listener" => "https")
+]) - failure description: "WFLYCTL0212: Duplicate resource [
+    (\"subsystem\" => \"undertow\"),
+    (\"server\" => \"default-server\"),
+    (\"https-listener\" => \"https\")
+]"
+2019-06-04 10:19:13,267 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) "WFLYCTL0193: Failed executing subsystem datasources boot operations"
+2019-06-04 10:19:13,268 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) "WFLYCTL0193: Failed executing subsystem undertow boot operations"
+2019-06-04 10:19:13,269 ERROR [org.jboss.as.controller.management-operation] (Controller Boot Thread) WFLYCTL0013: Operation ("parallel-subsystem-boot") failed - address: ([]) - failure description: "\"WFLYCTL0193: Failed executing subsystem datasources boot operations\""
+2019-06-04 10:19:13,273 FATAL [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0056: Server boot has failed in an unrecoverable manner; exiting. See previous messages for details.
+2019-06-04 10:19:13,290 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0050: Keycloak 6.0.1 (WildFly Core 8.0.0.Final) stopped in 9ms

@@ -23,4 +23,6 @@ public interface AuthProvider {
 
     Principal getPrincipal(HttpRequest httpRequest);
 
+
+
 }

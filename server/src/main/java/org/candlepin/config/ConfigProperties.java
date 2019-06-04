@@ -127,6 +127,7 @@ public class ConfigProperties {
     public static final String SSL_AUTHENTICATION = "candlepin.auth.ssl.enable";
     public static final String OAUTH_AUTHENTICATION = "candlepin.auth.oauth.enable";
     public static final String BASIC_AUTHENTICATION = "candlepin.auth.basic.enable";
+    public static final String KEYCLOAK_AUTHENTICATION = "candlepin.auth.keycloak.enable";
 
     // AMQP stuff
     public static final String AMQP_INTEGRATION_ENABLED = "candlepin.amqp.enable";

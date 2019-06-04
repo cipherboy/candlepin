@@ -1,0 +1,10 @@
+{
+  "realm": "master",
+  "auth-server-url": "http://localhost:8181/auth",
+  "ssl-required": "external",
+  "resource": "redhat",
+  "credentials": {
+    "secret": "d36058f6-fa21-43ef-ab0f-55332d389436"
+  },
+  "confidential-port": 0
+}
