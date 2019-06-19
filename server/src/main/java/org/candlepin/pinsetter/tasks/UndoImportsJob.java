@@ -96,12 +96,14 @@ public class UndoImportsJob extends UniqueByEntityJob {
         Principal principal = (Principal) map.get(PinsetterJobListener.PRINCIPAL_KEY);
 
         // TODO: Should we check the principal again here?
+        log.info("GRABBED OWNER: {}", owner);
 
         if (owner == null) {
             log.debug("Owner no longer exists: {}", ownerKey);
             context.setResult("Nothing to do; owner no longer exists: " + ownerKey);
             return;
         }
+
 
         String displayName = owner.getDisplayName();
 
