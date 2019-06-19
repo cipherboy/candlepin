@@ -1,111 +1,136 @@
-/*
- *  Copyright (c) 2009 - ${YEAR} Red Hat, Inc.
+/**
+ * Copyright (c) 2009 - 2012 Red Hat, Inc.
  *
- *  This software is licensed to you under the GNU General Public License,
- *  version 2 (GPLv2). There is NO WARRANTY for this software, express or
- *  implied, including the implied warranties of MERCHANTABILITY or FITNESS
- *  FOR A PARTICULAR PURPOSE. You should have received a copy of GPLv2
- *  along with this software; if not, see
- *  http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.
+ * This software is licensed to you under the GNU General Public License,
+ * version 2 (GPLv2). There is NO WARRANTY for this software, express or
+ * implied, including the implied warranties of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. You should have received a copy of GPLv2
+ * along with this software; if not, see
+ * http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.
  *
- *  Red Hat trademarks are not licensed under GPLv2. No permission is
- *  granted to use or replicate Red Hat trademarks that are incorporated
- *  in this software or its documentation.
+ * Red Hat trademarks are not licensed under GPLv2. No permission is
+ * granted to use or replicate Red Hat trademarks that are incorporated
+ * in this software or its documentation.
  */
 
 package org.candlepin.auth;
 
-import com.google.inject.Inject;
-import org.apache.commons.codec.binary.Base64;
+
+import org.jboss.resteasy.spi.HttpRequest;
+import org.keycloak.TokenVerifier;
+
+import javax.inject.Inject;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.ws.rs.core.Context;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import org.candlepin.auth.permissions.PermissionFactory;
 import org.candlepin.common.exceptions.CandlepinException;
-import org.candlepin.common.exceptions.NotAuthorizedException;
 import org.candlepin.common.exceptions.ServiceUnavailableException;
 import org.candlepin.common.resteasy.auth.AuthUtil;
-import org.candlepin.service.UserServiceAdapter;
-import org.jboss.resteasy.spi.HttpRequest;
+
 import org.keycloak.KeycloakSecurityContext;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.keycloak.KeycloakPrincipal;
+import org.candlepin.service.UserServiceAdapter;
+import org.keycloak.adapters.AdapterDeploymentContext;
+import org.keycloak.adapters.ServerRequest;
+import org.keycloak.adapters.RefreshableKeycloakSecurityContext;
+import org.keycloak.adapters.KeycloakDeployment;
+import org.keycloak.adapters.KeycloakDeploymentBuilder;
+import org.keycloak.common.VerificationException;
+import org.keycloak.representations.AccessToken;
+import org.keycloak.representations.AccessTokenResponse;
 import org.xnap.commons.i18n.I18n;
 
 import javax.inject.Provider;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.SecurityContext;
+/**
+ * KeycloakAuth
+ */
 
-public class KeycloakAuth extends UserAuth {
+public class KeycloakAuth extends UserAuth implements AuthProvider {
 
-    private static Logger log = LoggerFactory.getLogger(BasicAuth.class);
+    @Context private ServletRequest servletRequest;
+    @Context private ServletResponse servletResponse;
 
-    @Context
-    private SecurityContext securityContext;
+    protected AdapterDeploymentContext deploymentContext;
+
+    private AccessTokenResponse response = null;
+
+    private KeycloakDeployment kd;
 
     @Inject
-    public KeycloakAuth(UserServiceAdapter userServiceAdapter, Provider<I18n> i18nProvider, PermissionFactory permissionFactory) {
+    public KeycloakAuth(UserServiceAdapter userServiceAdapter, Provider<I18n> i18nProvider,
+        PermissionFactory permissionFactory) {
         super(userServiceAdapter, i18nProvider, permissionFactory);
+        createKeycloakDeploymentFrom();
     }
+
+    private void createKeycloakDeploymentFrom() {
+        try {
+
+            InputStream is = loadKeycloakConfigFile();
+            kd = KeycloakDeploymentBuilder.build(is);
+            deploymentContext = new AdapterDeploymentContext(kd);
+
+        }
+        catch (Exception e) {
+
+        }
+
+    }
+
+    private InputStream loadKeycloakConfigFile() throws FileNotFoundException {
+        String filepath = "/etc/candlepin/keycloak.json";
+        return new FileInputStream(filepath);
+
+    }
+
 
     @Override
     public Principal getPrincipal(HttpRequest httpRequest) {
         try {
             String auth = AuthUtil.getHeader(httpRequest, "Authorization");
-            System.out.println(auth);
-            //= httpRequest.getAttribute(KeycloakSecurityContext.class.getName());
-            String username = securityContext.getUserPrincipal().getName();
-            System.out.println(username+"hey this is username");
-            String password = null;
-            if (securityContext.getUserPrincipal() instanceof KeycloakPrincipal) {
-                KeycloakPrincipal<KeycloakSecurityContext> kp = (KeycloakPrincipal<KeycloakSecurityContext>)  securityContext.getUserPrincipal();
-                // Login Name
-                username = kp.getKeycloakSecurityContext().getIdToken().getPreferredUsername();
-                System.out.println("this is sc username"+username);
-               // password = kp.getKeycloakSecurityContext().getToken()
-            }
-            //i18r below!!
 
-            if (auth != null && auth.toUpperCase().startsWith("BASIC ")) {
-                String userpassEncoded = auth.substring(6);
-                String[] userpass = new String(Base64
-                        .decodeBase64(userpassEncoded)).split(":", 2);
-                username = userpass[0];
-                password = null;
-                if (userpass.length > 1) {
-                    password = userpass[1];
-                }
+            if (!auth.isEmpty()) {
 
-                if (log.isDebugEnabled()) {
-                    Integer length = (password == null) ? 0 : password.length();
-                    log.debug("check for: {} - password of length {}", username, length);
-                }
+                handleRefreshToken(httpRequest, auth);
 
-                if (userServiceAdapter.validateUser(username, password)) {
-                    Principal principal = createPrincipal(username);
-                    log.debug("principal created for user '{}'", username);
+                KeycloakSecurityContext keycloakSecurityContext = (KeycloakSecurityContext)
+                    httpRequest.getAttribute(KeycloakSecurityContext.class.getName());
+                if (keycloakSecurityContext != null) {
+                    String userName = keycloakSecurityContext.getToken().getPreferredUsername();
+                    Principal principal = createPrincipal(userName);
                     return principal;
                 }
-                else {
-                    throw new NotAuthorizedException(i18nProvider.get().tr("Invalid Credentials"));
-                }
             }
-
-
         }
         catch (CandlepinException e) {
-            if (log.isDebugEnabled()) {
-                log.debug("Error getting principal " + e);
-            }
             throw e;
         }
         catch (Exception e) {
-            if (log.isDebugEnabled()) {
-                log.debug("Error getting principal " + e);
-            }
             throw new ServiceUnavailableException(i18nProvider.get().tr("Error contacting user service"));
         }
+
         return null;
+    }
 
+    private void handleRefreshToken(HttpRequest httpRequest, String auth) throws IOException,
+        ServerRequest.HttpFailure, VerificationException {
 
+        String[] arrAut = auth.split(" ");
+        KeycloakOIDCFacade keycloakOIDCFacade = new KeycloakOIDCFacade(httpRequest);
+        KeycloakRequestAuthenticator requestAuthenticator =
+            new KeycloakRequestAuthenticator(keycloakOIDCFacade, kd, httpRequest);
+        response = ServerRequest.invokeRefresh(kd, arrAut[1]);
+        String tokenString = response.getToken();
+        AccessToken token = TokenVerifier.create(response.getToken(), AccessToken.class).getToken();
+        RefreshableKeycloakSecurityContext refreshableKeycloakSecurityContext = new
+            RefreshableKeycloakSecurityContext(kd, null, tokenString, token, null, null, arrAut[1]);
+        httpRequest.setAttribute(KeycloakSecurityContext.class.getName(), refreshableKeycloakSecurityContext);
 
     }
 }
+
+
