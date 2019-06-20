@@ -17,7 +17,9 @@ package org.candlepin.auth;
 
 
 import org.jboss.resteasy.spi.HttpRequest;
+import org.json.JSONObject;
 import org.keycloak.TokenVerifier;
+import org.apache.commons.codec.binary.Base64;
 
 import javax.inject.Inject;
 import javax.servlet.ServletRequest;
@@ -95,7 +97,27 @@ public class KeycloakAuth extends UserAuth implements AuthProvider {
 
             if (!auth.isEmpty()) {
 
-                handleRefreshToken(httpRequest, auth);
+                String[] authArray = auth.split(" ");
+                if (authArray[0].equals("Basic")) {
+                    //do oauth!
+                }
+
+                Base64 base64Url = new Base64(true);
+                String[] splitstring = authArray[1].split("\\.");
+                String base64EncodedBody = splitstring[1];
+                String body = new String(base64Url.decode(base64EncodedBody));
+                JSONObject obj = new JSONObject(body);
+                String tokenType = obj.getString("typ");
+
+                if (tokenType.equals("Refresh")) {
+                    //Offline Token authentication
+                    handleRefreshToken(httpRequest, auth);
+                }
+                else if (tokenType.equals("Bearer"))
+                {
+                    //Bearer only authentication
+                    handleBearerToken(httpRequest);
+                }
 
                 KeycloakSecurityContext keycloakSecurityContext = (KeycloakSecurityContext)
                     httpRequest.getAttribute(KeycloakSecurityContext.class.getName());
@@ -104,6 +126,10 @@ public class KeycloakAuth extends UserAuth implements AuthProvider {
                     Principal principal = createPrincipal(userName);
                     return principal;
                 }
+            }
+            else {
+                // if auth header is empty
+                return null;
             }
         }
         catch (CandlepinException e) {
@@ -116,13 +142,17 @@ public class KeycloakAuth extends UserAuth implements AuthProvider {
         return null;
     }
 
+    private void handleBearerToken(HttpRequest httpRequest) {
+        KeycloakOIDCFacade keycloakOIDCFacade = new KeycloakOIDCFacade(httpRequest);
+        KeycloakRequestAuthenticator requestAuthenticator =
+            new KeycloakRequestAuthenticator(keycloakOIDCFacade, kd, httpRequest);
+        requestAuthenticator.authenticate();
+    }
+
     private void handleRefreshToken(HttpRequest httpRequest, String auth) throws IOException,
         ServerRequest.HttpFailure, VerificationException {
 
         String[] arrAut = auth.split(" ");
-        KeycloakOIDCFacade keycloakOIDCFacade = new KeycloakOIDCFacade(httpRequest);
-        KeycloakRequestAuthenticator requestAuthenticator =
-            new KeycloakRequestAuthenticator(keycloakOIDCFacade, kd, httpRequest);
         response = ServerRequest.invokeRefresh(kd, arrAut[1]);
         String tokenString = response.getToken();
         AccessToken token = TokenVerifier.create(response.getToken(), AccessToken.class).getToken();
