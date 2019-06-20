@@ -30,7 +30,7 @@ describe 'Hypervisor Resource - Heartbeat Endpoint', :type => :virt do
 
     job.should_not be_nil
     job['id'].should include("hypervisor_update")
-    wait_for_job(job['id'], 10)
+    wait_for_async_job(job['id'], 10)
 
     consumer = @cp.get_consumer(@consumer.uuid)
 
